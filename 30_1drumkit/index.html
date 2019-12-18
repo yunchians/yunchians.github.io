@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="list">
+            <li class="key" data-key="65">
+                <div class="word">A
+                    <span>CLAP</span>
+                </div>
+            </li>
+            <li class="key" data-key="83">
+                <div class="word">S
+                    <span>HIHAT</span>
+                </div>
+            </li>
+            <li class="key" data-key="68">
+                <div class="word">D
+                    <span>KICK</span>
+                </div>
+            </li>
+            <li class="key" data-key="70">
+                <div class="word">F
+                    <span>OPENHAT</span>
+                </div>
+            </li>
+            <li class="key" data-key="71">
+                <div class="word">G
+                    <span>BOOM</span>
+                </div>
+            </li>
+            <li class="key" data-key="72">
+                <div class="word">H
+                    <span>RIDE</span>
+                </div>
+            </li>
+            <li class="key" data-key="74">
+                <div class="word">J
+                    <span>SNARE</span>
+                </div>
+            </li>
+            <li class="key" data-key="75">
+                <div class="word">K
+                    <span>TOM</span>
+                </div>
+            </li>
+            <li class="key" data-key="76">
+                <div class="word">L
+                    <span>TINK</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/openhat.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+    <audio data-key="76" src="sounds/tink.wav"></audio>
+    <script>
+        // 使用者點擊鍵盤觸發聲音播放跟CSS樣式改變
+
+        (function() {
+            // 監聽鍵盤事件
+            window.addEventListener('keydown', playaudio);
+
+            // 利用keycode找到對應的音樂跟改變CSS樣式
+            function playaudio(e) {
+
+                // 播放音效
+                const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+
+                // 判斷只有取得audio時才撥放音效
+                if (audio) {
+                    // 希望使用者可以重複觸發 撥放音效 currentTime設定0
+                    audio.currentTime = 0;
+                    audio.play();
+                }
+
+                // 改變CSS樣式
+                const changestyle = document.querySelector(`li[data-key="${e.keyCode}"]`);
+
+                // 判斷只有點擊到對應li才改變CSS樣式
+                if (changestyle) {
+                    // 增加class
+                    changestyle.classList.add('playing');
+                }
+
+                // console.log(audio, changestyle);
+
+                // 取得每一個key
+                // 用來監聽動畫結束後執行一個function
+                document.querySelectorAll('.key').forEach(function(key) {
+                    key.addEventListener('transitionend', translationhandler)
+                        // console.log(key);
+                });
+
+                // 判斷propertyName
+                function translationhandler(e) {
+                    if (e.propertyName === 'transform') {
+                        // 移除class
+                        e.currentTarget.classList.remove('playing');
+                        // console.log(e);
+                    }
+
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>

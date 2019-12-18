@@ -1,0 +1,37 @@
+// 立即函式
+https://ithelp.ithome.com.tw/articles/10193313
+
+// addEventListener 監聽事件
+https://www.runoob.com/jsref/met-element-addeventlistener.html
+
+方法:
+element.addEventListener(event,function,useCapture);
+// useCapture說明
+https://blog.othree.net/log/2007/02/06/third-argument-of-addeventlistener/
+
+// keyup按下後放開 keydown按下
+https://medium.com/@yitailin/%E6%AF%94%E8%BC%83-keydown-keypress-keyup-%E7%9A%84%E5%B7%AE%E7%95%B0-4e873ba17e81
+
+// key keyCode 獲取鍵盤對應的數值
+https://www.runoob.com/jsref/event-key-key.html
+https://www.runoob.com/jsref/event-key-keycode.html
+
+// querySelector 若不考慮支援ie8以下 靜態
+// getElementsByClassName 動態
+
+// es6字串組合
+https://ithelp.ithome.com.tw/articles/10213611
+
+// currentTime
+https://www.w3schools.com/tags/av_prop_currenttime.asp
+// 希望使用者可以重複觸發 撥放音效 currentTime設定0
+
+// classList用法
+// 相當於JQ addclass removeclss toggleclass
+https://www.runoob.com/try/try.php?filename=tryjsref_element_classlist_add
+
+// forEach
+https://wcc723.github.io/javascript/2017/06/29/es6-native-array/
+
+// 動畫結束
+https://www.runoob.com/jsref/event-transitionend.html
