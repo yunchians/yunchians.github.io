@@ -1,0 +1,85 @@
+body {
+    font-family: PingFang TC, Helvetica Neue, Microsoft JhengHei;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffe8;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    margin: 20px auto;
+    padding: 40px;
+    position: relative;
+    background-image: url(https://cssanimation.rocks/images/posts/clocks/ios_clock.svg);
+    background-size: 92%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+}
+
+.clock.simple:after {
+    background-color: #000;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 5%;
+    z-index: 10;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100%;
+    -ms-transform-origin: 100%;
+    transform-origin: 100%;
+    -webkit-transition: all 0.05s;
+    -o-transition: all 0.05s;
+    transition: all 0.05s;
+    -webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    -o-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour {
+    background-color: #03A9F4;
+}
+
+.min {
+    background-color: #009a0c;
+}
+
+.second {
+    background-color: #f40303;
+    height: 3px;
+}
+
+.showdate {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
