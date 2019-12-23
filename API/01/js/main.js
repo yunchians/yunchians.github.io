@@ -1,7 +1,7 @@
 let outputData;
 
 function getData() {
-    let xhrUrl = "https://cors-anywhere.herokuapp.com/http://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL";
+    let xhrUrl = "https://cors-anywhere.herokuapp.com/http://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL&$top=1000&$skip=0";
     let xhr = new XMLHttpRequest();
     xhr.open('GET', xhrUrl);
     xhr.onreadystatechange = function() {
