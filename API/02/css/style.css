@@ -156,10 +156,6 @@ select.city {
   white-space: normal;
 }
 
-.pagewrap {
-  text-align: center;
-}
-
 @media only screen and (max-width: 767px) {
   .header,
   .coverbg {
@@ -188,7 +184,7 @@ select.city {
     padding-left: 0px;
   }
   .description {
-    height: 140px;
+    height: 138px;
     -webkit-line-clamp: 6;
   }
   .noresult,
