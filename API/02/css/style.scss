@@ -9,9 +9,18 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     .title {
         color: #ffffff;
@@ -40,6 +49,8 @@ select.city {
     -ms-appearance: none;
     appearance: none;
     outline: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     padding: 10px 20px;
     color: #000000;
@@ -58,6 +69,8 @@ select.city {
     height: 50px;
     margin: 20px 0px;
     z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     &::after {
@@ -104,11 +117,16 @@ select.city {
     border-radius: 10px;
     height: 200px;
     background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     img {
         width: 25%;
         height: auto;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
         flex: 1;
     }
     .info {
@@ -125,6 +143,7 @@ select.city {
 .description {
     height: 90px;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -144,6 +163,9 @@ select.city {
     }
     .item {
         height: 450px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         margin: 20px;
         img,
