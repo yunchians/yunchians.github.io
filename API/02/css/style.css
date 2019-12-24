@@ -184,7 +184,7 @@ select.city {
     padding-left: 0px;
   }
   .description {
-    height: 138px;
+    height: 135px;
     -webkit-line-clamp: 6;
   }
   .noresult,
