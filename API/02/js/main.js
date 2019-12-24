@@ -19,7 +19,7 @@ $(document).ready(function() {
             url: "./js/data.json",
             dataType: "json",
             success: function(data) {
-                console.log("成功");
+                // console.log("成功");
                 for (i = 0; i < data.length; i++) {
                     if (cityVal == data[i].鄉鎮市區) {
                         showNoResult.hide();
@@ -47,7 +47,7 @@ $(document).ready(function() {
             },
 
             error: function() {
-                alert("失敗");
+                // console.log("失敗");
             }
         })
     });
