@@ -34,7 +34,7 @@
         let hours = NowTime.getHours();
         let mins = NowTime.getMinutes();
         let seconds = NowTime.getSeconds();
-        console.log(hours, mins, seconds);
+        // console.log(hours, mins, seconds);
 
         // 一圈360度/12小時 + 每60分，時針加30度；每1分，時針加30/60(1/2)度
         let deg_hours = hours * (360 / 12) + mins * (30 / 60) + 90;
@@ -56,7 +56,7 @@
         clockAnimate();
         setInterval(clockAnimate, 1000);
 
-        document.querySelector("#showdate").textContent = `${year}/${month}/${day}`;
+        document.querySelector('#showdate').textContent = `${year}/${month}/${day}`;
     </script>
 </body>
 
