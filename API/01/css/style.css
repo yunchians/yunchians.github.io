@@ -29,14 +29,24 @@ ul.list {
     width: 100%;
     height: auto;
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 ul.list li {
     height: 350px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 350px;
     flex: 0 0 350px;
     margin: 10px 5px;
     background-color: #f7f7f7;
