@@ -7,12 +7,12 @@
 
      // 取得用戶端現在時間
      let NowTime = new Date();
-     console.log(NowTime);
+     // console.log(NowTime);
      // 取得時分秒
      let hours = NowTime.getHours();
      let mins = NowTime.getMinutes();
      let seconds = NowTime.getSeconds();
-     console.log(hours, mins, seconds);
+     // console.log(hours, mins, seconds);
 
      // 一圈360度/12小時 + 每60分，時針加30度；每1分，時針加30/60(1/2)度
      // 扣掉90度 註:原本的時針初始位置多旋轉的90度
@@ -22,7 +22,7 @@
      // 一圈360度/60秒
      let deg_seconds = seconds * (360 / 60);
 
-     console.log(deg_hours, deg_mins, deg_seconds);
+     // console.log(deg_hours, deg_mins, deg_seconds);
      deg_hours += 360 / (60 * 60 * 12);
      deg_mins += 360 / (60 * 60); // 每秒6/60 每60秒6度
      deg_seconds += 360 / 60; // 每秒6度
