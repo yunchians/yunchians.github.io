@@ -8,18 +8,18 @@
 
 $(document).ready(function() {
 
-    let showSearch = $("#searchpage");
-    let showNoResult = $("#noresult");
+    let showSearch = $('#searchpage');
+    let showNoResult = $('#noresult');
 
-    $("select#city").change(function() {
-        $(".item").remove();
-        let cityVal = $("select#city").val();
+    $('select#city').change(function() {
+        $('.item').remove();
+        let cityVal = $('select#city').val();
         $.ajax({
-            type: "GET",
-            url: "./js/data.json",
-            dataType: "json",
+            type: 'GET',
+            url: './js/data.json',
+            dataType: 'json',
             success: function(data) {
-                // console.log("成功");
+                // console.log('成功');
                 for (i = 0; i < data.length; i++) {
                     if (cityVal == data[i].鄉鎮市區) {
                         showNoResult.hide();
@@ -33,13 +33,13 @@ $(document).ready(function() {
                                     <div class="description"><span class="title">簡述：</span>${data[i].簡述}</div>
                                 </div>
                             </div>`
-                        $("#searchpage > .row").append(resultContent);
+                        $('#searchpage > .row').append(resultContent);
 
-                    } else if (cityVal == "請選擇") {
+                    } else if (cityVal == '請選擇') {
                         showSearch.hide();
                         showNoResult.show();
-                        showNoResult.text("查無資料");
-                        $(".item").remove();
+                        showNoResult.text('查無資料');
+                        $('.item').remove();
                     }
                 }
                 // console.log(data);
@@ -47,7 +47,7 @@ $(document).ready(function() {
             },
 
             error: function() {
-                // console.log("失敗");
+                // console.log('失敗');
             }
         })
     });

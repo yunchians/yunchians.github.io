@@ -1,5 +1,10 @@
 body {
   font-family: PingFang TC, Helvetica Neue, Microsoft JhengHei;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #bfb9a1;
 }
 
 .wrapper {
@@ -8,16 +13,19 @@ body {
 }
 
 .wrapper .title {
+  color: #ffffff;
   font-size: 35px;
   font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 1px 2px #000000;
   text-align: center;
   margin: 35px 0px;
 }
 
 table.datablock,
-td,
-th {
-  border: 1px solid #ddd;
+td {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 table.datablock {
@@ -26,10 +34,16 @@ table.datablock {
   margin: 0px auto;
 }
 
-th,
-td {
+table.datablock td {
   padding: 15px;
   vertical-align: middle;
   text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+table.datablock td.titletext, table.datablock td.label {
+  width: 100px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

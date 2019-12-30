@@ -1,0 +1,82 @@
+body {
+    font-family: PingFang TC, Helvetica Neue, Microsoft JhengHei;
+    background-color: #000000;
+    background-image: url(../images/bg.jpg);
+    background-position: top;
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    width: 95%;
+    margin: 0px auto;
+    color: #ffffff;
+    padding-top: 8%;
+    .header {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin: 35px 0px;
+        text-shadow: 0px 1px 5px #000000;
+        .title {
+            font-size: 75px;
+            margin: 10px 0px;
+        }
+    }
+}
+
+ul.herolist {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    li.item {
+        margin: 20px;
+        p {
+            font-size: 16px;
+            margin: 10px 0px;
+            &.name {
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+ul.sub-list {
+    margin: 10px 0px;
+    list-style-type: disc;
+    list-style-position: inside;
+    li {
+        font-size: 16px;
+        margin: 5px 0px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    body {
+        background-size: contain;
+    }
+    .wrapper {
+        padding-top: 20%;
+        padding-bottom: 40px;
+    }
+    ul.herolist {
+        li.item {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 450px;
+            flex: 0 0 450px;
+        }
+    }
+}
