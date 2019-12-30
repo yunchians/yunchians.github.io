@@ -1,5 +1,3 @@
-const showDate = document.querySelector('ul.clock-list');
-
 let city = [{
         cityName: 'NEW YORK',
         timeZone: 'America/New_York',
@@ -22,16 +20,40 @@ let city = [{
     }
 ];
 
+const showDate = document.querySelector('ul.clock-list');
+
 function getNowTime() {
     // console.log('執行');
-    const showDatea = document.querySelectorAll('li');
+
     for (let i = 0; i < city.length; i++) {
-        let item = city[i];
         let getTime = new Date();
+        let item = city[i];
         // console.log(getTime);
         // console.log(item);
-        showDatea += 1;
+        let option = {
+            timeZone: item.timeZone,
+            year: 'numeric',
+            month: 'short',
+            day: '2-digit',
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit',
+        }
+        timeString = getTime.toLocaleString('en', option);
+        timeString = timeString.replace(/[\,]/g, '');
+        timeString = timeString.replace(':', ' ');
+        timeString = timeString.split(' ');
+        let [month, date, year, hour, min] = timeString;
+        let timeZone = document.createElement('li');
+        let template = `<div class="left">${item.cityName}<span>${date} ${month}. ${year}</span>
+        </div><div class="right">${hour}:${min}</div>`;
+
+        timeZone.innerHTML = template;
+        showDate.append(timeZone);
     }
 }
-// getNowTime();
-// setInterval(getNowTime, 1000);
+getNowTime();
+setInterval(function() {
+    showDate.innerHTML = '';
+    getNowTime();
+}, 1000);
