@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <div class="loader show">
+        <div class="loaderGif"></div>
+        <p>資料載入中</p>
+    </div>
     <div class="main">
         <div class="top">
             <div class="filter-block">
@@ -17,41 +21,46 @@
                 <div class="selectbox">
                     <select name="" id="city" class="city">
                         <option value="請選擇" selected>請選擇地區</option>
-                        <option value="中區">中區</option>
-                        <option value="東區">東區</option>
-                        <option value="西區">西區</option>
-                        <option value="南區">南區</option>
-                        <option value="北區">北區</option>
-                        <option value="西屯區">西屯區</option>
-                        <option value="南屯區">南屯區</option>
-                        <option value="北屯區">北屯區</option>
-                        <option value="豐原區">豐原區</option>
-                        <option value="大里區">大里區</option>
-                        <option value="太平區">太平區</option>
-                        <option value="清水區">清水區</option>
-                        <option value="沙鹿區">沙鹿區</option>
-                        <option value="大甲區">大甲區</option>
-                        <option value="東勢區">東勢區</option>
-                        <option value="梧棲區">梧棲區</option>
-                        <option value="烏日區">烏日區</option>
-                        <option value="神岡區">神岡區</option>
-                        <option value="大肚區">大肚區</option>
-                        <option value="大雅區">大雅區</option>
-                        <option value="后里區">后里區</option>
-                        <option value="霧峰區">霧峰區</option>
-                        <option value="潭子區">潭子區</option>
-                        <option value="龍井區">龍井區</option>
-                        <option value="外埔區">外埔區</option>
-                        <option value="和平區">和平區</option>
-                        <option value="石岡區">石岡區</option>
-                        <option value="大安區">大安區</option>
-                        <option value="新社區">新社區</option>
                     </select>
                 </div>
             </div>
-            <ul class="AQI-de">
-
-            </ul>
+            <table class="AQI-description">
+                <tr>
+                    <td class="no1">0～50</td>
+                    <td class="no2">51～100</td>
+                    <td class="no3">101～150</td>
+                    <td class="no4">151～200</td>
+                    <td class="no5">201～300</td>
+                    <td class="no6">301～400</td>
+                </tr>
+                <tr>
+                    <td>良好</td>
+                    <td>普通</td>
+                    <td>對敏感族群
+                        <br>不健康
+                    </td>
+                    <td>對所有族群
+                        <br>不健康
+                    </td>
+                    <td>非常不健康</td>
+                    <td>危害</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom">
+            <div class="result-title">
+                <div class="city">
+                    <p class="cityname"></p>
+                </div>
+                <div class="line"></div>
+                <span class="updatetime"></span>
+            </div>
+            <div class="result-tab">
+                <div class="main-tab">
+                </div>
+                <div class="other-tab">
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer">
