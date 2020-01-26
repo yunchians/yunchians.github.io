@@ -19,7 +19,7 @@ function award() {
     for (i = 1; i < 46; i++) {
         arr.push(i);
         arr.sort(function() {
-            return Math.random();
+            return Math.random() - 1;
         })
         arr.length = 6;
     };
