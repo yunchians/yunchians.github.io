@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>貨幣換算器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <div class="top-title">貨幣換算器</div>
+            <div class="content">
+                <p>1 美元 = 30.1600 台幣</p>
+                <p>1 美元 ＝ 7.7642 港幣</p>
+                <ul>
+                    <li>美元
+                        <input type="text" v-model="usd">
+                    </li>
+                    <li>新台幣
+                        <input type="text" v-model="twd" readonly="value">
+                    </li>
+                    <li>港幣
+                        <input type="text" v-model="hk" readonly="value">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
