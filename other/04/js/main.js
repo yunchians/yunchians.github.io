@@ -6,18 +6,18 @@ var app = new Vue({
     computed: {
         twd: {
             get() {
-                return this.usd * 30.1600
+                return this.usd
             },
             set(val) {
-                this.usd = val / 31.05
+                this.usd = val / 30.1600
             }
         },
         hk: {
             get() {
-                return this.usd * 7.83
+                return this.usd
             },
             set(val) {
-                this.usd = val / 7.83
+                this.usd = val / 7.7642
             }
         }
     }
