@@ -14,25 +14,38 @@ function award() {
     openAward.setAttribute('disabled', '');
     // 更換圖片
     lotteryBall.classList.add('animateball');
-    // 開獎數字
+    // 開獎數字 1-45 用for迴圈裝到一個空陣列內
     let arr = [];
-    for (i = 1; i < 46; i++) {
+    for (let i = 1; i < 46; i++) {
         arr.push(i);
-        arr.sort(function() {
-            return Math.random() - 1;
-        })
-        arr.length = 6;
     };
+
+
+    let newArr = [];
+    const ranNum = 7;
+    for (let y = 1; y < ranNum; y++) {
+        let ran = Math.floor(Math.random() * arr.length);
+        // Math.floor 回傳無條件捨去後最大整數
+        // ex.Math.floor(5.45) 結果會是5
+        // Math.random 0~1之間小數
+        // ex.0.15*45 = 6.75 無條件捨去得到6
+        newArr.push(arr.splice(ran, 1)); //舊陣列去除數字轉移到新陣列
+        // arr.splice(ran, 1)
+        // arr陣列在索引第幾個位子 刪除一個元素
+        // 將這個元素放到新陣列
+        // 陣列.splice(第幾個位子,刪去幾個數字,增加內容)
+    };
+
     setTimeout(() => {
         lotteryBall.classList.remove('animateball');
         popMessage.setAttribute('style', 'display:block');
-        document.querySelector('.numlist').textContent = arr;
-        document.querySelector('.content p').textContent = '中獎號碼: ' + arr;
+        document.querySelector('.numlist').textContent = newArr;
+        document.querySelector('.content p').textContent = '中獎號碼: ' + newArr;
         openAward.removeAttribute('disabled');
 
     }, 5000);
 
-    if (arr !== []) {
+    if (newArr !== []) {
         document.querySelector('.numlist').textContent = '';
     }
 }
