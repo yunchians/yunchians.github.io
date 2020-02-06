@@ -32,7 +32,7 @@ function award() {
         newArr.push(arr.splice(ran, 1)); //舊陣列去除數字轉移到新陣列
         // arr.splice(ran, 1)
         // arr陣列在索引第幾個位子 刪除一個元素
-        // 將這個元素放到新陣列
+        // 將這個被刪去的元素放到新陣列
         // 陣列.splice(第幾個位子,刪去幾個數字,增加內容)
     };
 
