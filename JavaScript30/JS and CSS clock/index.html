@@ -35,7 +35,6 @@
         let mins = NowTime.getMinutes();
         let seconds = NowTime.getSeconds();
         // console.log(hours, mins, seconds);
-
         // 一圈360度/12小時 + 每60分，時針加30度；每1分，時針加30/60(1/2)度
         let deg_hours = hours * (360 / 12) + mins * (30 / 60) + 90;
         // 一圈360度/60分 + 每60秒，分針加6度；每1秒，分針加6/60度
@@ -56,7 +55,18 @@
         clockAnimate();
         setInterval(clockAnimate, 1000);
 
-        document.querySelector('#showdate').textContent = `${year}/${month}/${day}`;
+        let currentMonth;
+
+        function checkNum(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            currentMonth = i;
+        }
+
+        checkNum(month);
+
+        document.querySelector('#showdate').textContent = `${year}/${currentMonth}/${day}`;
     </script>
 </body>
 
