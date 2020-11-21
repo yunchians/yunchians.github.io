@@ -1,0 +1,324 @@
+html,
+body {
+    background-color: #0e0347;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #0e0347;
+    background-attachment: fixed;
+}
+
+.center-block {
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.l-block,
+.r-block {
+    width: 50%;
+}
+
+.info-block {
+    text-align: center;
+}
+
+.qrcode-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.qrcode-block a {
+    display: inline-block;
+}
+
+img.qrcode-img {
+    width: 180px;
+    z-index: 1;
+}
+
+.text-block {
+    text-shadow: 0px 2px 2px #333333;
+    text-align: center;
+}
+
+.text-block p {
+    font-size: 45px;
+    font-weight: bolder;
+    color: #ffff01;
+    margin: 10px 0px;
+}
+
+.text-block ol {
+    margin: 0px;
+    padding: 0px;
+    list-style-position: inside;
+}
+
+.text-block ol li {
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.mobile-block {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.mobile-block img.mobile-img {
+    width: 50%;
+    min-width: 270px;
+    max-width: 400px;
+}
+
+img.joinmember-btn {
+    width: 35%;
+    max-width: 280px;
+    position: absolute;
+    top: 20%;
+    left: -80px;
+}
+
+a.hands {
+    width: 36%;
+    min-width: 188px;
+    height: 72px;
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+a.hands::after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    background-image: url(../images/hand.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-animation: floatUpDown 1.6s ease-in-out infinite;
+    animation: floatUpDown 1.6s ease-in-out infinite;
+}
+
+a.register-btn {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+a.register-btn img {
+    width: 65%;
+    min-width: 180px;
+    max-width: 280px;
+}
+
+@media screen and (min-width: 1400px) {
+    img.qrcode-img {
+        width: 280px;
+    }
+    .text-block p {
+        font-size: 50px;
+    }
+    .text-block ol li {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .page-wrapper {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .text-block p {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .center-block {
+        width: 100%;
+    }
+    .text-block p {
+        font-size: 32px;
+    }
+    img.qrcode-img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .center-block {
+        overflow: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+    .l-block,
+    .r-block {
+        width: 100%;
+    }
+    .info-block {
+        width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .text-block {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    img.qrcode-img {
+        width: 115px;
+    }
+    img.joinmember-btn {
+        display: none;
+    }
+    .text-block p {
+        font-size: 28px;
+    }
+    .text-block ol li {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .text-block p {
+        font-size: 25px;
+    }
+    .text-block ol li {
+        font-size: 30px;
+    }
+    .page-wrapper {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .text-block p {
+        font-size: 24px;
+    }
+    .text-block ol li {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .info-block {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    .text-block p {
+        font-size: 32px;
+    }
+    .text-block ol li {
+        font-size: 34px;
+    }
+    .joinmember-btn {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 115px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .text-block p {
+        font-size: 28px;
+    }
+    .text-block ol li {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    img.qrcode-img {
+        width: 120px;
+    }
+    .text-block p {
+        font-size: 26px;
+    }
+    .text-block ol li {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-height: 1024px) and (orientation: landscape) {
+    .page-wrapper {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 990px) and (orientation: landscape) {
+    html,
+    body {
+        height: auto;
+    }
+    .page-wrapper {
+        height: auto;
+    }
+    a.register-btn {
+        width: 60%;
+    }
+}

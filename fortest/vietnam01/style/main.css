@@ -1,0 +1,247 @@
+html,
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000000;
+    background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.logo-block {
+    width: 120px;
+    text-align: center;
+}
+
+.logo-block img {
+    width: 100%;
+}
+
+.qrcode-block {
+    position: relative;
+    z-index: 1;
+}
+
+.qrcode-block a {
+    display: inline-block;
+}
+
+.qrcode-block::before {
+    content: url(../images/zalo-logo.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: -80px;
+    bottom: 65px;
+}
+
+img.qrcode-img {
+    width: 180px;
+    z-index: 1;
+}
+
+.register-btn {
+    background-image: url(../images/register.png);
+    width: 200px;
+    height: 70px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.register-btn::after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    background-image: url(../images/hand.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -moz-animation: floatUpDown 1.6s ease-in-out infinite;
+    -webkit-animation: floatUpDown 1.6s ease-in-out infinite;
+    animation: floatUpDown 1.6s ease-in-out infinite;
+}
+
+.text-block {
+    text-shadow: 0px 2px 2px #333333;
+    z-index: 1;
+}
+
+.text-block p {
+    font-size: 42px;
+    font-weight: bolder;
+    color: #ffff01;
+    margin: 10px 0px;
+}
+
+.text-block ol {
+    margin: 0px 0px 30px 0px;
+    padding: 0px;
+    list-style-position: inside;
+}
+
+.text-block ol li {
+    color: #ffffff;
+    font-size: 34px;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.conin1 {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+.conin2 {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (max-width: 1199px) {}
+
+@media screen and (max-width: 990px) {}
+
+@media screen and (max-width: 767px) {
+    .text-block p {
+        font-size: 36px;
+    }
+    .text-block ol li {
+        font-size: 30px;
+    }
+    .conin1 img {
+        width: 180px;
+    }
+    .conin2 {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .text-block p {
+        font-size: 34px;
+    }
+    .text-block ol li {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    img.qrcode-img {
+        width: 170px;
+    }
+    .qrcode-block::before {
+        left: -75px;
+        bottom: 60px;
+    }
+    .text-block p {
+        font-size: 24px;
+    }
+    .text-block ol li {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .text-block p {
+        font-size: 22px;
+    }
+    .text-block ol li {
+        font-size: 28px;
+    }
+    img.qrcode-img {
+        width: 150px;
+    }
+    .qrcode-block::before {
+        left: -70px;
+        bottom: 55px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .text-block p {
+        font-size: 18px;
+    }
+    .text-block ol li {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 990px) and (orientation: landscape) {
+    html,
+    body {
+        height: auto;
+    }
+    .page-wrapper {
+        height: auto;
+    }
+    .logo-block {
+        margin-top: 20px;
+    }
+}
+
+@-webkit-keyframes floatUpDown {
+    0% {
+        -webkit-transform: translate(0, 12px);
+        transform: translate(0, 12px);
+    }
+    50% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0px);
+    }
+    100% {
+        -webkit-transform: translate(0, 12px);
+        transform: translate(0, 12px);
+    }
+}
+
+@keyframes floatUpDown {
+    0% {
+        -webkit-transform: translate(0, 12px);
+        transform: translate(0, 12px);
+    }
+    50% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0px);
+    }
+    100% {
+        -webkit-transform: translate(0, 12px);
+        transform: translate(0, 12px);
+    }
+}

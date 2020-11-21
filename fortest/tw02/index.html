@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="page1">
+<title>註冊送168體驗金</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+<link rel="stylesheet" href="style/main.css">
+<link rel="icon" type="image/png" href="images/favorite.png" />
+<script>
+    function changeColor() {
+        var color = "#ff0000|#ffff01";
+        color = color.split("|");
+        document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
+    }
+    setInterval("changeColor()", 200);
+</script>
+
+<body>
+    <div class="page-wrapper">
+        <div class="center-block">
+            <div class="l-block">
+                <div class="info-block">
+                    <div class="qrcode-block">
+                        <img src="images/line.png" style="margin-right: 20px;">
+                        <a href="https://lin.ee/D6Iuj0R" target="_blank">
+                            <img src="images/qrcode.png " class="qrcode-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="text-block">
+                    <p id="blink">掃描或點擊QR碼領取福利</p>
+                    <ol>
+                        <li>註冊送168體驗金</li>
+                        <li>首存1000送500</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="r-block">
+                <div class="ad-block">
+                    <img src="images/ad.png" class="ad-img">
+                    <a href="javascript:void(0)" class="register-btn">
+                        <img src="images/register-btn.gif">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
