@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html class="page1">
-<title>KU-Thông qua mã QR để thêm bạn trên Zalo-1 - KU CASINO | KUBET</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-<link rel="stylesheet" href="style/main.css">
-<link rel="icon" type="image/png" href="images/favorite.png" />
-<script>
-    function changeColor() {
-        var color = "#ff0000|#ffff01";
-        color = color.split("|");
-        document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
-    }
-    setInterval("changeColor()", 200);
-</script>
+
+<head>
+    <title>KU-Thông qua mã QR để thêm bạn trên Zalo-1 - KU CASINO | KUBET</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" type="image/png" href="images/favorite.png" />
+</head>
 
 <body>
     <div class="page-wrapper">
@@ -21,11 +16,11 @@
             <img src="images/ku-logo.png">
         </div>
         <div class="btn-block">
-            <a href="https://BB332.ku11.net" class="register-btn" target="_blank">
+            <a href="javascript:void(0)" class="register-btn" onclick="openOfficialURL()">
             </a>
         </div>
         <div class="qrcode-block">
-            <a href="https://zalo.me/0563031570" target="_blank">
+            <a href="javascript:void(0)" onclick="openQRcodeURL()">
                 <img src="images/qrcode.jpg" class="qrcode-img">
             </a>
         </div>
@@ -43,6 +38,15 @@
     <div class="conin2">
         <img src="images/coin2.png">
     </div>
+    <script src="js/setting.js"></script>
+    <script>
+        function changeColor() {
+            var color = "#ff0000|#ffff01";
+            color = color.split("|");
+            document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
+        }
+        setInterval("changeColor()", 200);
+    </script>
 </body>
 
 </html>

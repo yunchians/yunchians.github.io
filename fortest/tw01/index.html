@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html class="page1">
-<title>註冊送168體驗金</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-<link rel="stylesheet" href="style/main.css">
-<link rel="icon" type="image/png" href="images/favorite.png" />
-<script>
-    function changeColor() {
-        var color = "#ff0000|#ffff01";
-        color = color.split("|");
-        document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
-    }
-    setInterval("changeColor()", 200);
-</script>
+
+<head>
+    <title>註冊送168體驗金</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" type="image/png" href="images/favorite.png" />
+</head>
 
 <body>
     <div class="page-wrapper">
@@ -22,7 +17,7 @@
                 <div class="info-block">
                     <div class="qrcode-block">
                         <img src="images/line.png" style="margin-right: 20px;">
-                        <a href="https://lin.ee/D6Iuj0R" target="_blank">
+                        <a href="javascript:void(0)" onclick="openQRcodeURL()">
                             <img src="images/qrcode.png " class="qrcode-img">
                         </a>
                     </div>
@@ -39,13 +34,22 @@
                 <div class="mobile-block">
                     <img src="images/joinmember-btn.gif" class="joinmember-btn">
                     <img src="images/mobie.png" class="mobile-img">
-                    <a href="javascript:void(0)" class="register-btn">
+                    <a href="javascript:void(0)" class="register-btn" onclick="openOfficialURL()">
                         <img src="images/register-btn.gif">
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/setting.js"></script>
+    <script>
+        function changeColor() {
+            var color = "#ff0000|#ffff01";
+            color = color.split("|");
+            document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
+        }
+        setInterval("changeColor()", 200);
+    </script>
 </body>
 
 </html>
