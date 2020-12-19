@@ -63,13 +63,23 @@ body {
     display: inline-block;
 }
 
-.qrcode-block img {
+
+/*.qrcode-block img {
     width: 60px;
-}
+}*/
 
 img.qrcode-img {
     width: 180px;
     z-index: 1;
+}
+
+img.p_title {
+    width: 95%;
+    margin: 10px 0px;
+}
+
+img.text_list {
+    width: 70%;
 }
 
 .text-block {
@@ -194,13 +204,19 @@ a.register-btn img {
         padding-bottom: 20px;
     }
     img.qrcode-img {
-        width: 115px;
+        /* width: 115px; */
     }
     .text-block p {
         font-size: 28px;
     }
     .text-block ol li {
         font-size: 35px;
+    }
+    img.p_title {
+        width: 60%;
+    }
+    img.text_list {
+        width: 50%;
     }
 }
 
@@ -219,6 +235,12 @@ a.register-btn img {
     }
     .text-block ol li {
         font-size: 25px;
+    }
+    img.p_title {
+        width: 90%;
+    }
+    img.text_list {
+        width: 65%;
     }
 }
 
