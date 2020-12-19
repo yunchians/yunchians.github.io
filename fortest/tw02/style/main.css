@@ -183,7 +183,7 @@ a.register-btn img {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding: 50px 0px;
+        padding: 20px 0px;
     }
     .l-block,
     .r-block {
