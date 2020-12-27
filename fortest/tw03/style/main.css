@@ -8,6 +8,16 @@ body {
     position: relative;
 }
 
+#particles-js {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
 .page-wrapper {
     width: 100%;
     height: 100%;
@@ -22,7 +32,8 @@ body {
 .center-block {
     width: 90%;
     height: 100%;
-    margin: 0px auto;
+    transform: translate(-50%, 0px);
+    left: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -36,6 +47,11 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    position: absolute;
+    -webkit-transform: translate(-50%, 0px);
+    -moz-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -o-transform: translate(-50%, 0px);
 }
 
 .l-block,
@@ -156,13 +172,6 @@ a.customer-btn img {
 }
 
 @media screen and (max-width: 768px) {
-    html,
-    body {
-        height: auto;
-    }
-    .page-wrapper {
-        height: auto;
-    }
     .center-block {
         overflow: auto;
         -webkit-box-orient: vertical;
