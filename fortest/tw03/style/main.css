@@ -147,7 +147,12 @@ a.customer-btn img {
     width: 90%;
 }
 
-@media screen and (min-width: 1400px) {}
+@media screen and (min-width: 1400px) {
+    a.register-btn,
+    a.customer-btn {
+        max-width: 100%;
+    }
+}
 
 @media screen and (max-width: 1199px) {
     .page-wrapper {
