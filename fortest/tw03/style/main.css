@@ -165,6 +165,7 @@ a.customer-btn img {
     }
     .btn-group {
         margin-top: 10px;
+        margin-bottom: 10px;
     }
     a.register-btn,
     a.customer-btn {
@@ -175,9 +176,17 @@ a.customer-btn img {
     }
 }
 
-@media screen and (max-width: 640px) {}
+@media screen and (max-width: 640px) {
+    .ad-block img.ad-img {
+        width: 55%;
+    }
+}
 
-@media screen and (max-width: 568px) {}
+@media screen and (max-width: 568px) {
+    img.text-img {
+        margin: 5px 0px;
+    }
+}
 
 @media screen and (max-width: 414px) {}
 
