@@ -160,7 +160,7 @@ a.customer-btn img {
 @media screen and (max-width: 990px) {
     .center-block {
         width: 100%;
-        padding: 20px 0px;
+        padding: 40px 0px;
     }
     .text-block {
         width: 90%;
@@ -173,6 +173,7 @@ a.customer-btn img {
 
 @media screen and (max-width: 768px) {
     .center-block {
+        height: auto;
         overflow: auto;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
