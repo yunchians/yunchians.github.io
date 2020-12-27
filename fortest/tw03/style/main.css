@@ -76,8 +76,12 @@ img.text-img.img03 {
 
 .btn-group {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 60px;
 }
@@ -89,10 +93,29 @@ a.register-btn {
     height: auto;
     display: inline-block;
     text-align: center;
+    position: relative;
 }
 
 a.register-btn img {
     width: 80%;
+}
+
+a.register-btn::after {
+    content: '';
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    background-image: url(../images/hand.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    z-index: 1;
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-animation: floatUpDown 1.6s ease-in-out infinite;
+    animation: floatUpDown 1.6s ease-in-out infinite;
 }
 
 a.customer-btn {
@@ -164,8 +187,8 @@ a.customer-btn img {
         width: 80%;
     }
     .btn-group {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 25px;
     }
     a.register-btn,
     a.customer-btn {
@@ -215,4 +238,34 @@ a.customer-btn img {
     .page-wrapper {
         height: auto;
     } */
+}
+
+@-webkit-keyframes floatUpDown {
+    0% {
+        -webkit-transform: translate(0, 12px);
+        transform: translate(0, 12px);
+    }
+    50% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0px);
+    }
+    100% {
+        -webkit-transform: translate(0, 12px);
+        transform: translate(0, 12px);
+    }
+}
+
+@keyframes floatUpDown {
+    0% {
+        -webkit-transform: translate(0, 12px);
+        transform: translate(0, 12px);
+    }
+    50% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0px);
+    }
+    100% {
+        -webkit-transform: translate(0, 12px);
+        transform: translate(0, 12px);
+    }
 }
