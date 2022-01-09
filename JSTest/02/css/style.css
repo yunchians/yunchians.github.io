@@ -1,0 +1,63 @@
+body {
+  font-family: PingFang TC, Helvetica Neue, Microsoft JhengHei;
+  background-color: #003302;
+}
+
+.clock-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0px auto;
+  background-image: url(../images/clock-bg.svg);
+}
+
+.clock-wrapper .clock-face {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+}
+
+.hour-hand {
+  width: 72px;
+  height: 8px;
+  background-image: url(../images/hour-hand.svg);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.minute-hand {
+  width: 8px;
+  height: 96px;
+  background-image: url(../images/minute-hand.svg);
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  left: 48%;
+  top: 20%;
+}
+
+.second-hand {
+  width: 12px;
+  height: 126px;
+  background-image: url(../images/second-hand.svg);
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  left: 48%;
+  top: 10%;
+}
+/*# sourceMappingURL=style.css.map */

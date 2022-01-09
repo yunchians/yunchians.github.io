@@ -1,0 +1,127 @@
+body {
+    font-family: PingFang TC, Helvetica Neue, Microsoft JhengHei;
+}
+
+.calculator-wrapper {
+    width: 350px;
+    background: #062145 0% 0% no-repeat padding-box;
+    -webkit-box-shadow: 0px 20px 40px #00000066;
+    box-shadow: 0px 20px 40px #00000066;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.top {
+    width: 350px;
+    min-height: 109px;
+    background: #041936 0% 0% no-repeat padding-box;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    .text-block,
+    .total {
+        text-align: right;
+        letter-spacing: 0;
+        word-break: break-all;
+        text-align: right;
+    }
+    .text-block {
+        color: #00C4FF;
+        font-size: 16px;
+        padding-right: 5px;
+        min-height: 16px;
+    }
+    .total {
+        color: #FFFFFF;
+        font-size: 56px;
+        margin-top: 10px;
+        min-height: 56px;
+    }
+}
+
+ul.btn-list {
+    width: 100%;
+    height: 416px;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: flex-start;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    li {
+        color: #fff;
+        width: 25%;
+        height: 70px;
+        font-size: 18px;
+        border-radius: 20px;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .num,
+        .features {
+            width: 90%;
+            height: 90%;
+            border-radius: 20px;
+            border-radius: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            &:hover {
+                background-color: #0c438b;
+            }
+        }
+        &.equal {
+            width: 50%;
+            .features {
+                width: 75%;
+                background: transparent -o-linear-gradient(left, #00C4FF 0%, #6C00FF 100%) 0% 0% no-repeat;
+                background: transparent -webkit-gradient(linear, left top, right top, from(#00C4FF), to(#6C00FF)) 0% 0% no-repeat;
+                background: transparent linear-gradient(90deg, #00C4FF 0%, #6C00FF 100%) 0% 0% no-repeat;
+                -ms-flex-pack: flex-end;
+                -webkit-box-pack: end;
+                justify-content: flex-end;
+                padding-right: 30px;
+                &:hover {
+                    background: transparent -o-linear-gradient(left, #6C00FF 0%, #00C4FF 100%) 0% 0% no-repeat;
+                    background: transparent -webkit-gradient(linear, left top, right top, from(#6C00FF), to(#00C4FF)) 0% 0% no-repeat;
+                    background: transparent linear-gradient(90deg, #6C00FF 0%, #00C4FF 100%) 0% 0% no-repeat;
+                }
+            }
+        }
+        &.AC,
+        &.backdelete {
+            color: #00C4FF;
+        }
+        &.operation {
+            .features {
+                background-color: #041936;
+                &:hover {
+                    background-color: #0c438b;
+                }
+            }
+        }
+    }
+}

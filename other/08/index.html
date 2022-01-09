@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多層menu</title>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: PingFang TC, Helvetica Neue, Microsoft JhengHei;
+        }
+        
+        ul.nav {
+            width: 1000px;
+            margin: 0px auto;
+            padding: 0px;
+        }
+        
+        ul.nav::after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        
+        ul.nav li {
+            display: inline-block;
+            position: relative;
+            float: left;
+            list-style-type: none;
+            text-align: center;
+        }
+        
+        ul.nav li a {
+            display: block;
+            padding: 12px 25px;
+            background-color: #03A9F4;
+            color: #FFF;
+            text-decoration: none;
+        }
+        
+        ul.nav li a:hover {
+            color: #666;
+            background-color: #c6edff;
+        }
+        
+        ul.nav li ul {
+            display: none;
+            float: left;
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        ul.nav ul a {
+            width: 165px;
+            text-align: left;
+        }
+        
+        ul.nav li:hover ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">選單內容 1</a>
+        </li>
+        <li>
+            <a href="#">選單內容 2</a>
+            <ul>
+                <li>
+                    <a href="#">選單內容 2-1</a>
+                </li>
+                <li>
+                    <a href="#">選單內容 2-2</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">選單內容 3</a>
+        </li>
+        <li>
+            <a href="#">選單內容 4</a>
+        </li>
+        <li>
+            <a href="#">選單內容 5</a>
+        </li>
+        <li>
+            <a href="#">選單內容 6</a>
+        </li>
+        <li>
+            <a href="#">選單內容 7</a>
+        </li>
+    </ul>
+    <p style="text-align: center;">待完成 第三層顯示</p>
+</body>
+
+</html>

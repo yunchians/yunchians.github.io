@@ -1,0 +1,66 @@
+body {
+    font-family: PingFang TC, Helvetica Neue, Microsoft JhengHei;
+    background-color: #E5E5E5;
+}
+
+.wrapper {
+    margin: 0px auto;
+    padding: 40px 0px;
+    width: 535px;
+    height: auto;
+    .title {
+        height: auto;
+        padding: 10px 0px;
+        border-top: 8px solid #000;
+        border-bottom: 8px solid #000;
+        font-weight: bold;
+        font-family: ExtraBold, Open Sans;
+        font-size: 68px;
+        letter-spacing: 0px;
+    }
+}
+
+ul.clock-list {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    li {
+        height: 104px;
+        border: 2px solid #000000;
+        border-top: 0px;
+        padding: 0px 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        &:first-child {
+            border-top: 2px solid #000000;
+        }
+        &:first-child,
+        &:last-child {
+            background-color: #000000;
+            color: #fff;
+        }
+        .left,
+        .right {
+            font-weight: bold;
+        }
+        .left {
+            font-size: 45px;
+            span {
+                display: block;
+                font-size: 16px;
+                font-style: italic;
+                margin-top: 3px;
+            }
+        }
+        .right {
+            font-size: 65px;
+        }
+    }
+}

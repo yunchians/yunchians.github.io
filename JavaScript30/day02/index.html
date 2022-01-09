@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS + CSS Clock</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="showdate" id="showdate"></div>
+    <div class="clock simple">
+        <div class="clock-face">
+            <div class="hand hour"></div>
+            <div class="hand min"></div>
+            <div class="hand second"></div>
+        </div>
+    </div>
+    <script>
+        // 取得時分秒針
+        let gethour = document.querySelector('.hour');
+        let getmin = document.querySelector('.min');
+        let getsecond = document.querySelector('.second');
+
+        // 取得用戶端現在時間
+        let NowTime = new Date();
+        console.log(NowTime);
+        let year = NowTime.getFullYear();
+        let month = NowTime.getMonth();
+        let day = NowTime.getDate();
+        // 取得時分秒
+        let hours = NowTime.getHours();
+        let mins = NowTime.getMinutes();
+        let seconds = NowTime.getSeconds();
+        // console.log(hours, mins, seconds);
+        // 一圈360度/12小時 + 每60分，時針加30度；每1分，時針加30/60(1/2)度
+        let deg_hours = hours * (360 / 12) + mins * (30 / 60) + 90;
+        // 一圈360度/60分 + 每60秒，分針加6度；每1秒，分針加6/60度
+        let deg_mins = mins * (360 / 60) + seconds * (6 / 60) + 90;
+        // 一圈360度/60秒
+        let deg_seconds = seconds * (360 / 60) + 90;
+
+        function clockAnimate() {
+            deg_hours += 360 / (60 * 60 * 12);
+            deg_mins += 360 / (60 * 60); // 每秒6/60 每60秒6度
+            deg_seconds += 360 / 60; // 每秒6度
+
+            gethour.style.transform = `rotate(${deg_hours}deg)`
+            getmin.style.transform = `rotate(${deg_mins}deg)`
+            getsecond.style.transform = `rotate(${deg_seconds}deg)`
+        };
+
+        clockAnimate();
+        setInterval(clockAnimate, 1000);
+
+        let currentMonth;
+
+        function checkNum(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            currentMonth = i;
+        }
+
+        checkNum(month);
+
+        document.querySelector('#showdate').textContent = `${year}/${currentMonth}/${day}`;
+    </script>
+</body>
+
+</html>

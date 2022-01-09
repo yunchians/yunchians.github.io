@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="loader show">
+        <div class="loaderGif"></div>
+        <p>資料載入中</p>
+    </div>
+    <div class="main">
+        <div class="top">
+            <div class="filter-block">
+                <p>空氣品質指標 (AQI)</p>
+                <div class="selectbox">
+                    <select name="" id="city" class="city">
+                        <option value="請選擇" selected>請選擇地區</option>
+                    </select>
+                </div>
+            </div>
+            <table class="AQI-description">
+                <tr>
+                    <td class="no1">0～50</td>
+                    <td class="no2">51～100</td>
+                    <td class="no3">101～150</td>
+                    <td class="no4">151～200</td>
+                    <td class="no5">201～300</td>
+                    <td class="no6">301～400</td>
+                </tr>
+                <tr>
+                    <td>良好</td>
+                    <td>普通</td>
+                    <td>對敏感族群
+                        <br>不健康
+                    </td>
+                    <td>對所有族群
+                        <br>不健康
+                    </td>
+                    <td>非常不健康</td>
+                    <td>危害</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom">
+            <div class="result-title">
+                <div class="city">
+                    <p class="cityname"></p>
+                </div>
+                <div class="line"></div>
+                <span class="updatetime"></span>
+            </div>
+            <div class="result-tab">
+                <div class="main-tab">
+                </div>
+                <div class="other-tab">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="content">
+            <span>資料來源：行政院環境保護署</span>
+            <span>© 2019 HexSchool. All rights reserved.</span>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: PingFang TC, Helvetica Neue, Microsoft JhengHei;
+}
+
+.wrapper {
+    padding: 30px;
+    background-color: #000047;
+    .content {
+        padding: 20px;
+        border: 2px solid #ffffff;
+    }
+}
+
+.wrapper,
+.orderinfo {
+    width: 800px;
+    margin: 0px auto;
+}
+
+.orderinfo {
+    padding: 20px 30px;
+    .total,
+    .title {
+        font-size: 25px;
+        padding: 20px 0px;
+    }
+    .text {
+        line-height: 25px;
+    }
+    .total {
+        span.money {
+            font-size: 30px;
+            &:after {
+                content: ' 元';
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.top {
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    color: #ffffff;
+}
+
+.part1,
+.part2,
+.part3 {
+    color: #ffffff;
+    font-size: 18px;
+    .title {
+        font-size: 25px;
+        padding: 20px 0px;
+    }
+    ul.list {
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0px;
+            .name {
+                width: 200px;
+            }
+            .price {
+                width: 50px;
+                &:after {
+                    content: '元';
+                }
+            }
+            input.num {
+                width: 50px;
+                background-color: rgba(255, 255, 255, 0.4);
+                border: 0px;
+                text-align: center;
+                font-size: 20px;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.part1 {}
+
+.part2 {}
+
+.part3 {}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculator</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="calculator-wrapper">
+        <div class="top">
+            <div class="text-block"></div>
+            <div class="total"></div>
+        </div>
+
+        <ul class="btn-list">
+            <li>
+                <div class="num btn" data-val="7">7</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="8">8</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="9">9</div>
+            </li>
+            <li class="operation">
+                <div class="features btn" data-val="÷">÷</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="4">4</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="5">5</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="6">6</div>
+            </li>
+            <li class="operation">
+                <div class="features btn" data-val="x">x</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="1">1</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="2">2</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="3">3</div>
+            </li>
+            <li class="operation">
+                <div class="features btn" data-val="+">+</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="0">0</div>
+            </li>
+            <li>
+                <div class="num btn" data-val="00">00</div>
+            </li>
+            <li>
+                <div class="num btn" data-val=".">.</div>
+            </li>
+            <li class="operation">
+                <div class="features btn" data-val="-">-</div>
+            </li>
+            <li class="AC">
+                <div class="features btn" data-val="Clear">AC</div>
+            </li>
+            <li class="backdelete">
+                <div class="features btn" data-val="BACK">⌫</div>
+            </li>
+            <li class="equal">
+                <div class="features btn" data-val="=">=</div>
+            </li>
+        </ul>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
